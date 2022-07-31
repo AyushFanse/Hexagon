@@ -1,0 +1,53 @@
+body {
+    margin: -50px -100px -100px -100px;
+    min-height: 100vh;
+    background-color: #c3ff00;
+    overflow: hidden;
+}
+
+.hexagol {
+    width: 101%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 0 0 -10px;
+}
+
+.hexa {
+    --width:90px;
+    cursor: pointer;
+    position:relative;
+    transition: all 2s ease-out;
+    margin: 15px 2px;
+    width: var(--width);
+    height: calc(var(--width) * 0.58);
+    background: rgb(5, 5, 22);
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hexa::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    background: inherit;
+    transform: rotate(60deg);
+}
+
+.hexa::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    background: inherit;
+    transform: rotate(-60deg);
+}
